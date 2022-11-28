@@ -1,6 +1,6 @@
 package fr.yl.restfulldeployment.dao;
 
-import fr.kyo.crkf_web.entity.Classification;
+import fr.yl.restfulldeployment.work.Classification;
 
 import java.sql.*;
 import java.util.ArrayList;

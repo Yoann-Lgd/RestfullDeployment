@@ -1,7 +1,10 @@
 package fr.yl.restfulldeployment.dao;
 
-import fr.kyo.crkf_web.entity.Ecole;
-import fr.kyo.crkf_web.tools.Pair;
+
+
+import fr.yl.restfulldeployment.tools.Pair;
+import fr.yl.restfulldeployment.work.Ecole;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Comparator;

@@ -1,8 +1,7 @@
 package fr.yl.restfulldeployment.dao;
 
-import fr.kyo.crkf_web.entity.Compte;
-import fr.kyo.crkf_web.entity.Famille;
-import fr.kyo.crkf_web.entity.Instrument;
+
+import fr.yl.restfulldeployment.work.Compte;
 
 import java.sql.*;
 import java.util.ArrayList;

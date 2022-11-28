@@ -1,10 +1,12 @@
 package fr.yl.restfulldeployment.work;
 
-import fr.kyo.crkf_web.dao.DAOFactory;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import fr.yl.restfulldeployment.dao.DAOFactory;
 
 public class Departement {
 
     private final int departementId;
+    @JsonIgnore
     private String departementNumero;
     private String departementLibelle;
 

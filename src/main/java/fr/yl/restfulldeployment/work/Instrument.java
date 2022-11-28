@@ -1,6 +1,6 @@
 package fr.yl.restfulldeployment.work;
 
-import fr.kyo.crkf_web.dao.DAOFactory;
+import fr.yl.restfulldeployment.dao.DAOFactory;
 import java.util.ArrayList;
 import java.util.List;
 

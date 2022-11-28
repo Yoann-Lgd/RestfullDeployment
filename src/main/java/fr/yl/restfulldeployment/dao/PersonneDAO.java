@@ -1,9 +1,9 @@
 package fr.yl.restfulldeployment.dao;
 
-import fr.kyo.crkf_web.entity.Diplome;
-import fr.kyo.crkf_web.entity.Instrument;
-import fr.kyo.crkf_web.entity.Personne;
-import fr.kyo.crkf_web.tools.Pair;
+import fr.yl.restfulldeployment.work.Personne;
+import fr.yl.restfulldeployment.work.Diplome;
+import fr.yl.restfulldeployment.work.Instrument;
+import fr.yl.restfulldeployment.tools.Pair;
 
 import java.sql.*;
 import java.util.ArrayList;

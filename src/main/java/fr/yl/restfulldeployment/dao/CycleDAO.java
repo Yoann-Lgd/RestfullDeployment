@@ -1,6 +1,7 @@
 package fr.yl.restfulldeployment.dao;
 
-import fr.kyo.crkf_web.entity.Cycle;
+import fr.yl.restfulldeployment.work.Cycle;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

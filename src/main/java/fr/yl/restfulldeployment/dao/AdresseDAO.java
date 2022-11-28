@@ -1,6 +1,6 @@
 package fr.yl.restfulldeployment.dao;
 
-import fr.kyo.crkf_web.entity.Adresse;
+import fr.yl.restfulldeployment.work.Adresse;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;

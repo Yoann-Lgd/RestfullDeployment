@@ -55,6 +55,7 @@
           <element id="library" level="project" name="Maven: org.jboss.logging:jboss-logging-annotations:2.2.1.Final" />
           <element id="library" level="project" name="Maven: org.jboss.jdeparser:jdeparser:2.0.3.Final" />
           <element id="library" level="project" name="Maven: org.jboss.classfilewriter:jboss-classfilewriter:1.2.5.Final" />
+          <element id="library" level="project" name="Maven: com.microsoft.sqlserver:mssql-jdbc:11.2.1.jre17" />
         </element>
       </element>
       <element id="directory" name="META-INF">

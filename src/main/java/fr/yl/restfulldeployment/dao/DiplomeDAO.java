@@ -1,6 +1,6 @@
 package fr.yl.restfulldeployment.dao;
 
-import fr.kyo.crkf_web.entity.Diplome;
+import fr.yl.restfulldeployment.work.Diplome;
 
 import java.sql.*;
 import java.util.ArrayList;

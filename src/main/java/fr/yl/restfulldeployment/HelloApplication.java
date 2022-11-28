@@ -1,4 +1,4 @@
-package fr.yl.restfulldeployment.endpoint;
+package fr.yl.restfulldeployment;
 
 import jakarta.ws.rs.ApplicationPath;
 import jakarta.ws.rs.core.Application;

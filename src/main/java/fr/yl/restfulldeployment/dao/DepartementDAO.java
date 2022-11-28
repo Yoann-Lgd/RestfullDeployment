@@ -1,7 +1,8 @@
 package fr.yl.restfulldeployment.dao;
 
-import fr.kyo.crkf_web.entity.Departement;
-import fr.kyo.crkf_web.entity.Ville;
+import fr.yl.restfulldeployment.work.Ville;
+import fr.yl.restfulldeployment.work.Departement;
+
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
