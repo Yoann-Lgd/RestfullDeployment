@@ -1,11 +1,13 @@
 package fr.yl.restfulldeployment.work;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import fr.yl.restfulldeployment.dao.DAOFactory;
 
 public class Famille {
 
     private int familleId;
     private String familleLibelle;
+    @JsonIgnore
     private int classificationId;
 
     public Famille(int familleId, String familleLibelle, int classificationId) {

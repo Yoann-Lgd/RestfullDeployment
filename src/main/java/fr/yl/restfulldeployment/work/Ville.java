@@ -1,13 +1,17 @@
 package fr.yl.restfulldeployment.work;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import fr.yl.restfulldeployment.dao.DAOFactory;
 
 public class Ville {
 
     private final int villeId;
     private String villeLibelle;
+    @JsonIgnore
     private float longitude;
+    @JsonIgnore
     private float latitude;
+    @JsonIgnore
     private int departementId;
 
     public Ville(int villeId, String villeLibelle, float longitude, float latitude ,int departementId) {

@@ -1,10 +1,13 @@
 package fr.yl.restfulldeployment.work;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import fr.yl.restfulldeployment.dao.DAOFactory;
 
 public class Diplome {
 
+    @JsonIgnore
     private int cycle;
+    @JsonIgnore
     private int instrument;
 
     public Diplome(int cycle, int instrument) {

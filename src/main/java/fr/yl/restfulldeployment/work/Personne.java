@@ -1,5 +1,6 @@
 package fr.yl.restfulldeployment.work;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import fr.yl.restfulldeployment.dao.DAOFactory;
 import java.util.ArrayList;
 import java.util.List;
@@ -9,10 +10,15 @@ public class Personne {
     private int personneId;
     private String personneNom;
     private String personnePrenom;
+    @JsonIgnore
     private int vehiculeCv;
+    @JsonIgnore
     private int adresseId;
+    @JsonIgnore
     private int ecoleID;
+    @JsonIgnore
     private List<Diplome> diplomes;
+    @JsonIgnore
     private List<Famille> familles;
     public Personne() {
         this.personneId = 0;
