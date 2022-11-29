@@ -7,9 +7,9 @@ import java.util.List;
 
 public class Instrument {
     private final int instrumentId;
-    @JsonIgnore
+
     private String instrumentLibelle;
-    @JsonIgnore
+
     private List<Integer> familles;
 
     public Instrument(int instrumentId, String instrumentLibelle) {
