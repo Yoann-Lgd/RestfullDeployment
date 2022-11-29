@@ -30,11 +30,4 @@ public class FamilleResource {
             return Response.ok(famille).build();
         }
 
-        @GET
-        @Path("{id}/instruments")
-        @Produces(MediaType.APPLICATION_JSON)
-        public Response getInstrumentsByFamille(@PathParam("id") Integer idOfFamille){
-            List<Instrument> instrumentList = DAOFactory.getInstrumentDAO().getByFamille(idOfFamille);
-            return Response.ok(instrumentList).build();
-        }
 }

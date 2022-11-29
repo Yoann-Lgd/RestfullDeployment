@@ -28,5 +28,11 @@ public class InstrumentResource {
         Instrument instrument  = DAOFactory.getInstrumentDAO().getByID(id);
         return Response.ok(instrument).build();
     }
-
+    @GET
+    @Path("familles/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getInstrumentsByFamille(@PathParam("id") Integer idOfFamille){
+        List<Instrument> instrumentList = DAOFactory.getInstrumentDAO().getByFamille(idOfFamille);
+        return Response.ok(instrumentList).build();
+    }
 }

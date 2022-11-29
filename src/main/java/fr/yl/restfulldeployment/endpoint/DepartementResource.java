@@ -30,7 +30,7 @@ public class DepartementResource{
         return Response.ok(departement).build();
     }
     @GET
-    @Path("{id}/villes")
+    @Path("villes/{id}")
     @Produces(MediaType.APPLICATION_JSON)
     public Response getVillesByDepartement(@PathParam("id") Integer idOfDepartement){
         List<Ville> villeList = DAOFactory.getDepartementDAO().getVilleByDepartement(idOfDepartement);
