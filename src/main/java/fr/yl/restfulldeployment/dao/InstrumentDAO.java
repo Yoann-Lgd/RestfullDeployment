@@ -48,7 +48,9 @@ public class InstrumentDAO extends DAO<Instrument> {
 
     public List<Instrument> getByFamille(int famille_id) {
         List<Instrument> liste = new ArrayList<>();
-        String strCmd = "SELECT id_instrument, Nom from Instrument where id_famille = ? order by Nom";
+        String strCmd = "SELECT Instrument.id_instrument, Nom from Instrument\n" +
+                "join Instrument_Famille on Instrument_Famille.id_Instrument = Instrument.id_instrument\n" +
+                "where id_famille = ? order by Nom";
         try (PreparedStatement preparedStatement = connection.prepareStatement(strCmd)) {
             preparedStatement.setInt(1,famille_id);
             ResultSet rs = preparedStatement.executeQuery();

@@ -29,7 +29,6 @@ public class DepartementResource{
         Departement departement = DAOFactory.getDepartementDAO().getByID(id);
         return Response.ok(departement).build();
     }
-
     @GET
     @Path("{id}/villes")
     @Produces(MediaType.APPLICATION_JSON)

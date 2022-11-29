@@ -29,11 +29,4 @@ public class InstrumentResource {
         return Response.ok(instrument).build();
     }
 
-    @GET
-    @Path("{id}/villes")
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response getInstrumentsByFamille(@PathParam("id") Integer idOfFamille){
-        List<Instrument> instrumentList = DAOFactory.getInstrumentDAO().getByFamille(idOfFamille);
-        return Response.ok(instrumentList).build();
-    }
 }

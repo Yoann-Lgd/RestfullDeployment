@@ -29,5 +29,4 @@ public class VilleResource {
         return Response.ok(ville).build();
     }
 
-
 }

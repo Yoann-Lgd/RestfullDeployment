@@ -28,11 +28,4 @@ public class EcoleResource {
         return Response.ok(ecole).build();
     }
 
-    @GET
-    @Path("{id}/villes")
-    @Produces(MediaType.APPLICATION_JSON)
-    public Response getEcolesByDepartement(@PathParam("id") Integer idOfDepartement){
-        List<Ecole> ecoleList = DAOFactory.getEcoleDAO().getByDepartement(idOfDepartement);
-        return Response.ok(ecoleList).build();
-    }
 }
