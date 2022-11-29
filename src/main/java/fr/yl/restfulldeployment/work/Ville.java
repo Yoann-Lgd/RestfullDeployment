@@ -4,8 +4,10 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import fr.yl.restfulldeployment.dao.DAOFactory;
 
 public class Ville {
-
-    private final int villeId;
+    public Ville(){
+        super();
+    }
+    private  int villeId;
     private String villeLibelle;
 
     private float longitude;
@@ -49,7 +51,7 @@ public class Ville {
     public void setLatitude(float latitude) {
         this.latitude = latitude;
     }
-
+    @JsonIgnore
     public Departement getDepartement() {
         return DAOFactory.getDepartementDAO().getByID(departementId);
     }

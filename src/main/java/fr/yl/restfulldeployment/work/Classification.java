@@ -1,6 +1,10 @@
 package fr.yl.restfulldeployment.work;
 
 public class Classification {
+    public Classification() {
+        super();
+    }
+
     private int classificationId;
     private String classificationLibelle;
 

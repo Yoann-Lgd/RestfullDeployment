@@ -62,8 +62,8 @@ public class AdresseDAO extends DAO<Adresse> {
             preparedStatement.setInt(2, objet.getVille().getVilleId());
             preparedStatement.executeUpdate();
             ResultSet rs = preparedStatement.getGeneratedKeys();
-            if(rs.next()) return rs.getInt(1);
             connection.commit();
+            if(rs.next()) return rs.getInt(1);
         } catch(SQLException e) {
             try {
                 connection.rollback();

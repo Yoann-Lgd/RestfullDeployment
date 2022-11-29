@@ -1,17 +1,18 @@
 package fr.yl.restfulldeployment.endpoint;
 
 import fr.yl.restfulldeployment.dao.DAOFactory;
+import fr.yl.restfulldeployment.work.Departement;
 import fr.yl.restfulldeployment.work.Ecole;
-import jakarta.ws.rs.GET;
-import jakarta.ws.rs.Path;
-import jakarta.ws.rs.PathParam;
-import jakarta.ws.rs.Produces;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.tags.Tag;
+import jakarta.ws.rs.*;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
 import java.util.List;
 
 @Path("/ecoles")
+@Tag(name = "ecoles")
 public class EcoleResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
@@ -28,4 +29,49 @@ public class EcoleResource {
         return Response.ok(ecole).build();
     }
 
+    @POST
+    @Consumes(MediaType.APPLICATION_JSON)
+    @ApiResponse(responseCode = "204", description = "Créé")
+    @ApiResponse(responseCode = "404", description = "non créée !")
+    public Response create(Ecole ecole){
+        if(ecole == null){
+            return Response.status(Response.Status.BAD_REQUEST).build();
+        }
+        if (DAOFactory.getEcoleDAO().insert(ecole) != 0){
+            return Response.status(204).build();
+        }
+        else{
+            return Response.status(Response.Status.BAD_REQUEST).build();
+        }
+    }
+    @PUT
+    @Consumes(MediaType.APPLICATION_JSON)
+    @ApiResponse(responseCode = "204", description = "Créé")
+    @ApiResponse(responseCode = "404", description = "non créée !")
+    public Response update(Ecole ecole){
+        if(ecole == null){
+            return Response.status(Response.Status.BAD_REQUEST).build();
+        }
+        if (DAOFactory.getEcoleDAO().update(ecole)){
+            return Response.status(204).build();
+        }
+        else{
+            return Response.status(Response.Status.BAD_REQUEST).build();
+        }
+    }
+
+    @DELETE
+    @Path("{id}")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @ApiResponse(responseCode = "204", description = "Créé")
+    @ApiResponse(responseCode = "404", description = "non créée !")
+    public Response delete(@PathParam("id") Integer id){
+        if(id == null){
+            return Response.status(Response.Status.BAD_REQUEST).build();
+        }
+        if (DAOFactory.getEcoleDAO().delete(DAOFactory.getEcoleDAO().getByID(id)))
+            return Response.status(204).build();
+        else
+            return Response.status(Response.Status.BAD_REQUEST).build();
+    }
 }

@@ -4,9 +4,11 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import fr.yl.restfulldeployment.dao.DAOFactory;
 
 public class Departement {
+    public Departement() {
+        super();
+    }
 
-    private final int departementId;
-
+    private int departementId;
     private String departementNumero;
     private String departementLibelle;
 

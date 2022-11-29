@@ -4,9 +4,11 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import fr.yl.restfulldeployment.dao.DAOFactory;
 
 public class Adresse {
-
-    private final int adresseId;
-    private final String adresseLibelle;
+    public Adresse(){
+        super();
+    }
+    private int adresseId;
+    private String adresseLibelle;
     private int ville;
 
     public Adresse(int adresseId, String adresse, int ville) {
