@@ -6,7 +6,7 @@ import fr.yl.restfulldeployment.dao.DAOFactory;
 public class Departement {
 
     private final int departementId;
-    @JsonIgnore
+
     private String departementNumero;
     private String departementLibelle;
 

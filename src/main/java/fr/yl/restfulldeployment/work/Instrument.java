@@ -35,7 +35,7 @@ public class Instrument {
     public void setInstrumentLibelle(String instrumentLibelle) {
         this.instrumentLibelle = instrumentLibelle;
     }
-
+    @JsonIgnore
     public List<Famille> getFamillesObject() {
         List<Famille> list = new ArrayList<>();
         for(int i : familles)

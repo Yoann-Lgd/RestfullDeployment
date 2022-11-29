@@ -7,7 +7,6 @@ public class Adresse {
 
     private final int adresseId;
     private final String adresseLibelle;
-    @JsonIgnore
     private int ville;
 
     public Adresse(int adresseId, String adresse, int ville) {

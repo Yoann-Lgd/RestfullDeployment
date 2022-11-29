@@ -6,7 +6,7 @@ import fr.yl.restfulldeployment.dao.DAOFactory;
 public class Cycle {
     private final int cycleId;
     private String cycleLibelle;
-    @JsonIgnore
+
     private int cycleNumero;
 
     public Cycle(int cycleId, String cycleLibelle, int cycleNumero) {

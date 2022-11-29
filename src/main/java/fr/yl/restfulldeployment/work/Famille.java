@@ -39,7 +39,7 @@ public class Famille {
     public void setClassificationId(int classificationId) {
         this.classificationId = classificationId;
     }
-
+    @JsonIgnore
     public Classification getClassificationObject() {
         return DAOFactory.getClassificationDAO().getByID(classificationId);
     }

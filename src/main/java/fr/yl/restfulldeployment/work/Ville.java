@@ -7,11 +7,11 @@ public class Ville {
 
     private final int villeId;
     private String villeLibelle;
-    @JsonIgnore
+
     private float longitude;
-    @JsonIgnore
+
     private float latitude;
-    @JsonIgnore
+
     private int departementId;
 
     public Ville(int villeId, String villeLibelle, float longitude, float latitude ,int departementId) {

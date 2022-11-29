@@ -10,11 +10,11 @@ public class Personne {
     private int personneId;
     private String personneNom;
     private String personnePrenom;
-    @JsonIgnore
+
     private int vehiculeCv;
-    @JsonIgnore
+
     private int adresseId;
-    @JsonIgnore
+
     private int ecoleID;
     @JsonIgnore
     private List<Diplome> diplomes;
@@ -81,7 +81,7 @@ public class Personne {
     public void setEcoleObject(int ecoleID) {
         this.ecoleID = ecoleID;
     }
-
+    @JsonIgnore
     public Adresse getAdresseObject() {
         return DAOFactory.getAdresseDAO().getByID(adresseId);
     }
@@ -97,7 +97,7 @@ public class Personne {
     public void setEcoleID(int ecoleID) {
         this.ecoleID = ecoleID;
     }
-
+    @JsonIgnore
     public Ecole getEcoleObject() {
         return DAOFactory.getEcoleDAO().getByID(ecoleID);
     }
@@ -105,10 +105,11 @@ public class Personne {
     public void setEcoleObject(Ecole ecoleID) {
         this.ecoleID = ecoleID.getEcoleId();
     }
-
+    @JsonIgnore
     public List<Diplome> getDiplomes() {
         return diplomes;
     }
+    @JsonIgnore
     public List<Famille> getFamilles() { return familles; }
     public void setFamilles(List<Famille> familles ) { this.familles = familles; }
 

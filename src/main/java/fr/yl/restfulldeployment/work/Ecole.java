@@ -7,7 +7,7 @@ public class Ecole {
 
     private final int ecoleId;
     private String ecoleNom;
-    @JsonIgnore
+
     private final int ecoleAdresse;
 
     public Ecole(int ecoleId, String ecoleNom ,int ecoleAdresse) {
