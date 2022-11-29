@@ -56,6 +56,20 @@
           <element id="library" level="project" name="Maven: org.jboss.jdeparser:jdeparser:2.0.3.Final" />
           <element id="library" level="project" name="Maven: org.jboss.classfilewriter:jboss-classfilewriter:1.2.5.Final" />
           <element id="library" level="project" name="Maven: com.microsoft.sqlserver:mssql-jdbc:11.2.1.jre17" />
+          <element id="library" level="project" name="Maven: io.swagger.core.v3:swagger-jaxrs2-jakarta:2.2.7" />
+          <element id="library" level="project" name="Maven: io.github.classgraph:classgraph:4.8.150" />
+          <element id="library" level="project" name="Maven: io.swagger.core.v3:swagger-models-jakarta:2.2.7" />
+          <element id="library" level="project" name="Maven: io.swagger.core.v3:swagger-annotations-jakarta:2.2.7" />
+          <element id="library" level="project" name="Maven: io.swagger.core.v3:swagger-integration-jakarta:2.2.7" />
+          <element id="library" level="project" name="Maven: io.swagger.core.v3:swagger-core-jakarta:2.2.7" />
+          <element id="library" level="project" name="Maven: org.apache.commons:commons-lang3:3.12.0" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.35" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.dataformat:jackson-dataformat-yaml:2.14.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.14.0" />
+          <element id="library" level="project" name="Maven: org.yaml:snakeyaml:1.33" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.jakarta.rs:jackson-jakarta-rs-json-provider:2.14.0" />
+          <element id="library" level="project" name="Maven: com.fasterxml.jackson.jakarta.rs:jackson-jakarta-rs-base:2.14.0" />
+          <element id="library" level="project" name="Maven: io.swagger.core.v3:swagger-jaxrs2-servlet-initializer-v2-jakarta:2.2.7" />
         </element>
       </element>
       <element id="directory" name="META-INF">
