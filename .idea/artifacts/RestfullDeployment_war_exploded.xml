@@ -70,6 +70,7 @@
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.jakarta.rs:jackson-jakarta-rs-json-provider:2.14.0" />
           <element id="library" level="project" name="Maven: com.fasterxml.jackson.jakarta.rs:jackson-jakarta-rs-base:2.14.0" />
           <element id="library" level="project" name="Maven: io.swagger.core.v3:swagger-jaxrs2-servlet-initializer-v2-jakarta:2.2.7" />
+          <element id="library" level="project" name="Maven: com.auth0:java-jwt:4.2.1" />
         </element>
       </element>
       <element id="directory" name="META-INF">
