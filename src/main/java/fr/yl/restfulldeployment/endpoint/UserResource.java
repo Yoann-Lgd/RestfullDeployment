@@ -1,5 +1,6 @@
 package fr.yl.restfulldeployment.endpoint;
 
+import fr.yl.restfulldeployment.security.AccountVerification;
 import fr.yl.restfulldeployment.security.MyToken;
 import fr.yl.restfulldeployment.security.User;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -17,7 +18,7 @@ public class UserResource {
     @Path("/login")
     @Consumes(MediaType.APPLICATION_JSON)
     public Response login(User user) {
-        if (user.getLogin().equals("admin") && user.getPassword().equals("admin")) {
+        if (AccountVerification.login(user)) {
             return Response.ok().header(TOKEN, new MyToken(user.getLogin(), user.getPassword())).build();
         } else {
             return Response.status(Response.Status.UNAUTHORIZED).build();
