@@ -30,6 +30,7 @@ public class EcoleResource {
     }
 
     @POST
+    @Tokened
     @Consumes(MediaType.APPLICATION_JSON)
     @ApiResponse(responseCode = "204", description = "Créé")
     @ApiResponse(responseCode = "404", description = "non créée !")
