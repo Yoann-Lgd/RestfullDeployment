@@ -6,6 +6,8 @@ import org.glassfish.soteria.identitystores.hash.Pbkdf2PasswordHashImpl;
 
 public class AccountVerification {
 
+    private AccountVerification(){}
+
     public static boolean login(User user) {
         Compte temp = DAOFactory.getCompteDAO().getByEmail(user.getLogin());
         if (temp != null) {

@@ -1,28 +1,28 @@
 package fr.yl.restfulldeployment.work;
 
 public class Compte {
-    private int id_compte;
+    private int idCompte;
     private String email;
     private String password;
 
     public Compte() {
-        this.id_compte = 0;
+        this.idCompte = 0;
         this.email = "";
         this.password = "";
     }
 
-    public Compte(int id_compte, String email, String password) {
-        this.id_compte = id_compte;
+    public Compte(int idCompte, String email, String password) {
+        this.idCompte = idCompte;
         this.email = email;
         this.password = password;
     }
 
-    public int getId_compte() {
-        return id_compte;
+    public int getIdCompte() {
+        return idCompte;
     }
 
-    public void setId_compte(int id_compte) {
-        this.id_compte = id_compte;
+    public void setIdCompte(int idCompte) {
+        this.idCompte = idCompte;
     }
 
     public String getEmail() {
