@@ -18,6 +18,7 @@
         <jersey.version>3.1.0</jersey.version>
         <resteasy.version>6.2.1.Final</resteasy.version>
         <swagger.version>2.2.7</swagger.version>
+        <resteasy.version>6.2.1.Final</resteasy.version>
     </properties>
 
     <dependencies>
@@ -27,7 +28,6 @@
             <version>5.0.0</version>
             <scope>provided</scope>
         </dependency>
-
         <dependency>
             <groupId>org.jboss.resteasy</groupId>
             <artifactId>resteasy-core</artifactId>
@@ -48,7 +48,6 @@
             <artifactId>resteasy-jackson2-provider</artifactId>
             <version>${resteasy.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.jboss.weld.se</groupId>
             <artifactId>weld-se-core</artifactId>

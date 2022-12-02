@@ -16,6 +16,7 @@ import java.util.List;
 public class EcoleResource {
     @GET
     @Produces(MediaType.APPLICATION_JSON)
+    @Tokened
     public Response getAll() {
         List<Ecole> ecoles = DAOFactory.getEcoleDAO().getAll(0);
         return Response.ok(ecoles).build();
@@ -37,8 +38,7 @@ public class EcoleResource {
     public Response create(Ecole ecole) {
         if (ecole == null) {
             return Response.status(Response.Status.BAD_REQUEST).build();
-        }
-        if (DAOFactory.getEcoleDAO().insert(ecole) != 0) {
+        } if (DAOFactory.getEcoleDAO().insert(ecole) != 0) {
             return Response.status(204).build();
         } else {
             return Response.status(Response.Status.BAD_REQUEST).build();
