@@ -10,9 +10,7 @@ public class AccountVerification {
         Compte temp = DAOFactory.getCompteDAO().getByEmail(user.getLogin());
         if (temp != null) {
             Pbkdf2PasswordHashImpl pbkdf2PasswordHash = new Pbkdf2PasswordHashImpl();
-            if (pbkdf2PasswordHash.verify(user.getPassword().toCharArray(), temp.getPassword())) {
-                return true;
-            }
+            return pbkdf2PasswordHash.verify(user.getPassword().toCharArray(), temp.getPassword());
         }
         return false;
     }
