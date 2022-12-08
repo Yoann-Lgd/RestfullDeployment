@@ -1,8 +1,8 @@
-package fr.yl.restfulldeployment.endpoint;
+package fr.ot.restfulldeployment.endpoints;
 
-import fr.yl.restfulldeployment.dao.DAOFactory;
-import fr.yl.restfulldeployment.work.Cycle;
-import fr.yl.restfulldeployment.work.Famille;
+import fr.ot.restfulldeployment.dto.ClassificationDto;
+import fr.ot.restfulldeployment.repository.ClassificationRepository;
+import fr.ot.restfulldeployment.models.ClassificationEntity;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.ws.rs.*;
@@ -11,34 +11,34 @@ import jakarta.ws.rs.core.Response;
 
 import java.util.List;
 
-@Path("/familles")
-@Tag(name = "familles")
-public class FamilleResource {
+@Path("/classifications")
+@Tag(name = "classifications")
+public class ClassificationResource {
+    private ClassificationRepository classificationRepository= new ClassificationRepository();
+    @GET
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getAll(){
+        List<ClassificationDto> classifications = classificationRepository.getAll();
+        return Response.ok(classifications).build();
+    }
 
-        @GET
-        @Produces(MediaType.APPLICATION_JSON)
-        public Response getAll(){
-            List<Famille> familles = DAOFactory.getFamilleDAO().getAll(0);
-            return Response.ok(familles).build();
-        }
-
-        @GET
-        @Path("{id}")
-        @Produces(MediaType.APPLICATION_JSON)
-        public Response getById(@PathParam("id") Integer id){
-            Famille famille  = DAOFactory.getFamilleDAO().getByID(id);
-            return Response.ok(famille).build();
-        }
+    @GET
+    @Path("{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Response getById(@PathParam("id") Integer id){
+        ClassificationDto classification = classificationRepository.getById(id);
+        return Response.ok(classification).build();
+    }
 
     @PUT
     @Consumes(MediaType.APPLICATION_JSON)
     @ApiResponse(responseCode = "204", description = "Modifié")
     @ApiResponse(responseCode = "404", description = "non trouvée !")
-    public Response update(Famille famille){
-        if(famille == null){
+    public Response update(ClassificationEntity classification){
+        if(classification == null){
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
-        if (DAOFactory.getFamilleDAO().update(famille))
+        if (classificationRepository.update(classification))
             return Response.status(204).build();
         else
             return Response.status(Response.Status.BAD_REQUEST).build();
@@ -48,16 +48,15 @@ public class FamilleResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @ApiResponse(responseCode = "204", description = "Créé")
     @ApiResponse(responseCode = "404", description = "non créée !")
-    public Response create(Famille famille){
-        if(famille == null){
+    public Response create(ClassificationEntity classification){
+        if(classification == null){
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
-        if (DAOFactory.getFamilleDAO().insert(famille) != 0)
+        if (classificationRepository.create(classification) != 0)
             return Response.status(204).build();
         else
             return Response.status(Response.Status.BAD_REQUEST).build();
     }
-
     @DELETE
     @Path("{id}")
     @Consumes(MediaType.APPLICATION_JSON)
@@ -67,9 +66,10 @@ public class FamilleResource {
         if(id == null){
             return Response.status(Response.Status.BAD_REQUEST).build();
         }
-        if (DAOFactory.getFamilleDAO().delete(DAOFactory.getFamilleDAO().getByID(id)))
+        if (classificationRepository.delete(id))
             return Response.status(204).build();
         else
             return Response.status(Response.Status.BAD_REQUEST).build();
     }
+
 }

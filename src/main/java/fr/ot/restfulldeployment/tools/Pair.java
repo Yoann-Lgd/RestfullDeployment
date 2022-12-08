@@ -1,4 +1,4 @@
-package fr.yl.restfulldeployment.tools;
+package fr.ot.restfulldeployment.tools;
 
 public class Pair<U, V> {
 
